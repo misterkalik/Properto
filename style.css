@@ -1,0 +1,574 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    padding-bottom: 20vh;
+    font-family: "Spectral", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+#tytulowa{
+    background: 
+    linear-gradient(rgba(27, 21, 9, 0.9), rgba(27, 21, 9, 0.9)), 
+    url("wizualne/grafiki/budynek.jpg");
+    background-size: cover;
+    background-position: center;
+    /* display: block; Ustawianie WIDOKU */
+}
+
+.logo{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.logoNapis {
+    display: block;
+    width: 100vw;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.logoNapis:hover{
+    cursor: default;
+}
+
+.logoNapis span{
+    font-size: 40px;
+    color: aliceblue;
+}
+.oferta{
+    width: 100vw;
+    height: 55vh;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.ofertaPoczatek{
+    display: block;
+}
+
+.ofertaPoczatek p{
+    font-size: 50px;
+    color:aliceblue;
+    margin-bottom: 30px;
+}
+
+.ofertaPoczatek p:hover{
+    cursor: default;
+}
+
+.ofertaPoczatek button{
+    background-color: #bbb4ac;
+    font-size: 20px;
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+}
+
+#tytulowaOferta{
+    /* background: 
+    linear-gradient(rgba(27, 21, 9, 0.9), rgba(27, 21, 9, 0.9)), 
+    url("grafiki/LOGO PROPERTO/batch_DOMEK.svg");
+  background-size: 80vh;
+  background-repeat: no-repeat;
+  background-position: center; */
+  position: relative;
+  background-color: rgba(27, 21, 9, 0.9);
+  color: black;
+    /* display: none; Ustawianie WIDOKU */
+}
+
+
+
+.podstrona {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 75vh;
+  
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s ease;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .podstrona.aktywna {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+
+
+
+.logoOferta{
+    width: 100vw;
+    height: 8vh;
+    justify-content: center;
+    text-align: center;
+    line-height: 8vh;
+    padding-top: 0px;
+    /* border: 2px solid rgb(0, 13, 255); */
+}
+
+.logoOferta:hover{
+    cursor: default;
+}
+
+.oferta button:hover{
+    background-color: #8b837a;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.ofertaKoniec{
+    width: 100vw;
+    height: 65vh;
+    display: grid;
+    /* border: 2px solid red; */
+    grid-template-columns: repeat(3, 20vw); /* 3 kolumny i szer */
+    grid-template-rows: repeat(3, 19vh);    /* 3 wiersze i wys*/
+    gap: 20px 60px;                               
+    justify-content: center; /* wyśrodkowanie w poziomie */
+    align-content: center;
+    margin-bottom: 5vh;
+}
+
+.ofertaKoniec .ofertaDymki{
+    background-color: #bbb4ac;
+    height: 100%;
+    width: 100%;
+    border-radius: 35px;
+    
+    text-align: center;
+    padding: 10px;   
+    
+    display: flex;               /* aktywacja flexbox */
+    flex-direction: column;      /* układ pionowy */
+    justify-content: center;     /* pionowe wyśrodkowanie */
+    align-items: center;
+}
+
+.ofertaDymkiTytul{
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.ofertaDymkiTekst{
+    font-size: 15px;
+}
+
+.ofertaDymkiTytul:hover, .ofertaDymkiTekst:hover{
+    cursor: default;
+}
+
+
+#pasekInfo{
+    height: 5vh;
+    width: 100vw;
+    /* border: 3px solid rgb(76, 0, 255); */
+    background-color: rgb(0, 0, 0);
+    position: fixed ;
+    bottom: 20vh;
+    left: 0px;
+    text-align: center;
+    line-height: 5vh;
+}
+
+#pasekInfo:hover{
+    cursor: default;
+}
+
+#pasekInfo .infoNapis {
+    display: inline-flex;         /* elementy obok siebie */
+    align-items: center;          /* pionowe wyśrodkowanie */
+    margin: 0px 15px;              
+    color: white;                 
+    font-weight: 500;
+}
+
+#pasekInfo .infoNapis img {
+    margin-right: 8px;            /* odstęp obrazka od tekstu */
+}
+
+footer{
+    height: 20vh;
+    width: 100vw;
+    /* border: 3px solid rgb(47, 255, 0); */
+    position: fixed ;
+    bottom: 0px;
+    left: 0px;
+    background-color: #bdae9e;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+footer a{
+    background-color: #e4e0db;
+    height: 85%;
+    width: 11%;
+    /* border: 1px solid red;  */
+    margin: 0px 40px; 
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px 3px;
+    transition: height 0.3s;
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    height: 115%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.tlo{
+    width: 100%;
+    height: auto; 
+    min-height: 80vh;
+    /* border: 2px solid red; */
+    /* background: 
+    linear-gradient(rgba(27, 21, 9, 0.9), rgba(27, 21, 9, 0.9)), 
+    url("grafiki/LOGO PROPERTO/batch_DOMEK.svg"); */
+    background-size: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(27, 21, 9, 0.9);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* wyśrodkuje w poziomie */
+    align-items: center; 
+    
+}
+
+
+.tMaska {
+    position: absolute;
+    top: 2vh;
+    z-index: -2;
+    display: inline-block;
+    width: 40vw;
+    height: 70vh;
+}
+
+.tMaska img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.tMaska::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    
+    /* kolor nakładany na SVG, może być przezroczysty */
+    background-color: rgba(27, 21, 9, 0.8); 
+    
+    /* maska z SVG */
+    -webkit-mask-image: url("wizualne/grafiki/LOGO PROPERTO/batch_DOMEK.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
+    mask-image: url("wizualne/grafiki/LOGO PROPERTO/batch_DOMEK.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    pointer-events: none;
+}
+
+
+
+.logoRog{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+/* ------------------------- O FIRMIE ----------------------------- */
+.opis{
+    width: 55vw;
+    height: auto;
+    /* border: 1px solid green; */
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top:60px;
+    margin-bottom: 2vh;
+}
+
+.opis:hover{
+    cursor: default;
+}
+
+#opisOstatni{
+    margin-bottom: 5vh;
+}
+
+.opisObrazek{
+    position: absolute;
+    top: -25px;
+    left: -50px;
+    z-index: 1;
+    background-color:#bbb4ac ;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+.opisTytul{
+    color: aliceblue;
+    font-size: 32px;
+    position: relative;
+    left:7%
+}
+
+.opisObrazekPrawa{
+    position: absolute;
+    top: -25px;
+    right: -50px;
+    z-index: 1;
+    background-color:#bbb4ac ;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+.opisTytulPrawa{
+    color: aliceblue;
+    font-size: 32px;
+    position: relative;
+    left:56%;
+}
+
+.opisDymek{
+    background-color: #e4e0db;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    font-size: 17px;
+    display: flex;
+    position: relative;
+}
+
+/* ------------------------- KONTAKT ----------------------------- */
+
+.kontakt{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    margin-bottom: 5vh;
+}
+
+.kontaktObrazek{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    background-color: #bdae9e;
+    padding: 10px;
+    
+}
+
+.kontaktObrazek img{
+    height: 100%;
+}
+
+.kontakt p{
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.kontakt hr{
+    width: 30vw;
+    margin: 20px 0px 20px 0px;
+}
+
+.kontaktMapa{
+    position: relative; width: 400px; height: 300px;
+}
+
+.kontaktMapaNakladka{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+
+#instagram2{
+    background: linear-gradient(90deg, #f9ce34, #ee2a7b, #6228d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* dla WebKit */
+    background-clip: text; /* standard */
+    color: transparent; /* fallback */
+}
+
+/* ------------------------- ZAŁATW SPRAWE ----------------------------- */
+
+#zalatwSprawe{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0vw;
+    
+}
+
+.zsKategoria{
+    height: 25vh;
+    width: 25vw;
+    background-color: #e4e0db;
+    border-radius: 10px;
+    margin: 0vh 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 3px solid red; */
+}
+
+.zsTytul{
+    color: black;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin: 0px 0px 20px 0px;
+    font-size: 30px;
+}
+
+.zsTytul:hover{
+    cursor: default;
+}
+
+.zsWybor{
+    color: black;
+    width: 100%;
+    /* border: 1px solid red; */
+    margin: 0px;
+    max-height: 0;            /* brak miejsca w układzie */
+    overflow: hidden;         /* nic nie wyleci */
+    opacity: 0;               /* niewidoczny */
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+} 
+
+.zsKategoria:hover .zsWybor {
+    max-height: 80%;        /* wystarczająco duże, żeby zmieściły się linki */
+    opacity: 1;
+  }
+
+.zsWybor a{
+    color: black;
+    text-decoration: none;
+    margin: 5px 0px;
+    display: block;
+    font-size: 17px;
+}
+
+.zsWybor a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* ------------------------- AKTUALNOSCI ----------------------------- */
+
+.aktualnosci{
+    display: block;
+    width: 90vw;
+    height: auto;     min-height: 80vh;
+    margin: 0vh 5vw 0vh 5vw;
+    /* border: 1px solid red; */
+}
+
+#wyszukiwanie{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+}
+
+#szukaj{
+    height: 5vh;
+    width: 50vw;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 120%;
+    background-color: #e4e0db;
+    color: black;
+}
+
+#sortowanie{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 120%;
+    color: #c7c7c7;
+}
+
+#sortuj{
+    width: 10vw;
+    text-align: center;
+    background-color: #cacacac7;
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    border-radius: 20px;
+}
+
+.aDymek{
+    background-color: #e4e0db;
+    color: black;
+    margin-top: 5vh;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.aDymek:hover{
+    cursor: default;
+}
+
+.czas{
+    font-size: 90%;
+}
+
+.adTytul{
+    font-size: 150%;
+    margin: 10px 0px;
+}
+
+.adTresc{
+    white-space: pre-line;
+    font-size: 100%;
+}
