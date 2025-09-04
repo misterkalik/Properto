@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" >
+        <title> Properto </title>
+        <link rel="icon" href="../../wizualne/grafiki/LOGO PROPERTO/batch_DOMEK.svg">
+        <link rel="stylesheet" href="../../style.css">
+        <script src="../../script.js" defer></script>
+
+
+    </head>
+
+    <body class="noFooter">
+        <div class="tloFormularze">
+            <div class="tMaska">
+                <img class="tloObrazek" src="../../wizualne/grafiki/LOGO PROPERTO/batch_DOMEK.svg" alt="Dom">
+            </div>
+
+            <img class="logoRog" src="../../wizualne/grafiki/LOGO PROPERTO/tekst/text3.webp" width="18%">
+
+            <a id="fPowrot" href="../zalatwsprawe.html">powrót</a>
+
+            <div class="formularz">
+                <div class="fTytul">ZAMAWIAM</div>
+                <p class="fOpis">W celu zgłoszenia usterek, awarii lub innych nieprawidłowości w Państwa nieruchomości prosimy o wypełnienie poniższego formularza. Zgłoszenia będą niezwłocznie rejestrowane i przekazywane do odpowiednich służb w celu podjęcia działań naprawczych. Uprzejmie prosimy o możliwie precyzyjne opisanie problemu, co pozwoli na szybsze i skuteczniejsze usunięcie usterki.</p>
+                
+                <form class="formularz">
+                    <label for="name">IMIĘ I NAZWISKO</label><br>
+                    <input type="text" id="name" name="name" placeholder="Jan Kowalski" required><br><br>
+
+                    <label for="email">ADRES E-MAIL</label><br>
+                    <input type="email" id="email" name="email" placeholder="jankowalski@gmail.com" required><br><br>
+
+                    <label for="tel">NUMER TELEFONU</label><br>
+                    <input type="tel" id="tel" name="tel" placeholder="123-456-789" required><br><br>
+
+                    <label for="adres">ADRES</label><br>
+                    <input type="text" id="adres" name="adres" placeholder="ul.Akacjowa 1" required><br><br>
+
+                    <label for="usterka">MIEJSCE USTERKI</label><br>
+                    <input type="text" id="usterka" name="usterka" placeholder="drzwi domofonowe klatka B" required><br><br>
+
+                    <label for="opis">OPIS USTERKI</label><br>
+                    <textarea id="opis" name="opis" rows="10" cols="50" placeholder="zacinają się drzwi wejściowe, po wpisaniu kodu konieczne jest mocne szarpnięcie" required></textarea><br><br>
+
+                    
+                    <label for="zdjecia">ZDJĘCIA/FILMY</label><br>
+                    <div class="zdjeciaPudelko">    
+                        <label class="plikWgraj"> <!-- file-upload -->
+                            <input type="file" id="zdjecia" name="zdjecia" multiple>
+                            <span class="plikGuzik">+</span> <!-- custom-file-button -->
+                            <span class="plikGuzik">+</span> <!-- custom-file-button -->
+                            <span class="plikGuzik">+</span> <!-- custom-file-button -->
+                            <span class="plikGuzik">+</span> <!-- custom-file-button -->
+                        </label>
+                        <ul class="plikLista">Brak plików</ul>  <!-- file-list -->
+                    </div>
+
+                    <div class="ptaszekPudlo">
+                        <input type="checkbox" id="checkbox" name="checkbox" required>
+                        <label id="ptaszekOpis" for="checkbox">Oświadczam, że zapoznałem (-am) się z <a>klauzulą informacyjną</a> oraz akceptuję regulamin </label>
+                    </div>
+                    <button id="fGuzik" type="submit">Wyślij</button>
+
+                </form>
+            
+            </div>
+        </div>
+    </body>
+
+</html>
