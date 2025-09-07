@@ -964,7 +964,7 @@ footer a:hover{
 .logowaniePanel{
     width: 75%;
     height: 100%;
-    /* border: 3px solid blue; */
+    border: 3px solid blue; 
     display: flex;
     align-items: center;   
     justify-content: center;
@@ -990,3 +990,4 @@ footer a:hover{
     color: #bdae9e;
     margin-bottom: 15px;
 }
+
