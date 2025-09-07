@@ -991,4 +991,108 @@ footer a:hover{
     margin-bottom: 15px;
 }
 
+@media (max-width: 999px) {
+    /* ----------STRONA GLOWNA----------- */
+    
+
+    /* ----------O FIRMIE----------- */
+    .opisTytulPrawa{
+        left:30%;
+    }
+    .opisTytul{
+        left:10%;
+    }
+
+    /* ----------MOJ PANEL----------- */
+    .lObrazekPudlo{
+        height: 3vh;
+        margin-top: 50px;
+    }
+    /* ----------ZALATW SPRAWE----------- */
+    .zsTytul{
+        font-size: 230%;
+    }
+    
+    .zsWybor{
+        max-height: 80%;
+        opacity: 1;
+        font-size: 130%;
+    }
+
+    /* ----------KONTAKT----------- */
+    .kontakt hr{
+        width: 100%;
+    }
+
+    /* ----------FORMULARZE----------- */
+    #fPowrot{
+        font-size: 250%;
+    }
+
+    .fTytul{
+        width: 360px;
+        height: 180px;
+        line-height: 180px;
+        font-size: 400%;
+    }
+    
+    .fOpis{
+        width: 60%;
+        font-size: 160%;
+    }
+    
+    .formularz form{
+        width: 60%;
+    }
+
+    .formularz form label{
+        font-size: 160%;
+    }
+
+    .formularz form input{
+        margin-bottom: 50px;
+        height: 65px;
+        border-radius: 35px;
+        font-size: 200%;
+        padding: 10px;
+    }
+
+    .formularz form select{
+        margin-bottom: 60px;
+        height: 65px;
+        border-radius: 35px;
+        font-size: 200%;
+        padding: 10px;
+    }
+
+    .formularz form textarea{
+        margin-bottom: 60px;
+        height: 65px;
+        border-radius: 35px;
+        font-size: 200%;
+        padding: 10px;
+    }
+
+    .plikLista{
+        font-size: 200%;
+    }
+
+    #checkbox{
+        height: 40px;
+        width: 40px;
+    }
+
+    #ptaszekOpis{
+        font-size: 140%;
+    }
+
+    .formularz form button{
+        font-size: 240%;
+    }
+
+    .enter{
+        display: none;
+    }
+}
+
 
