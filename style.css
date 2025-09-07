@@ -679,7 +679,7 @@ footer a:hover{
 }
 
 .fTytul{
-    width: 200px;
+    width: 220px;
     height: 100px;
     background-color: #bbb4ac;
     text-align: center;
@@ -738,6 +738,26 @@ footer a:hover{
     font-style: italic; 
     opacity: 1;        
   }
+
+  .formularz form select{
+    width: 100%;
+    height: 35px;
+    background-color: #EBE5DE;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 10px; 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.formularz form select:invalid{
+    color: #a39d97;      
+    font-style: italic; 
+    opacity: 1;   
+}
 
 .formularz form textarea{
     width: 100%;
@@ -808,7 +828,7 @@ footer a:hover{
 }
   
 /* .file-list */
-.plikLista {
+.plikLista2 {
     /* border: 1px solid red; */
     font-size: 14px;
     color: #555;
@@ -819,7 +839,7 @@ footer a:hover{
 }
 
 /* .file-list li */
- .plikLista li{
+.plikLista2 li{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -830,9 +850,56 @@ footer a:hover{
 }
   
 /* .file-list li:hover */
-.plikLista li:hover {
+.plikLista2 li:hover {
     background-color: #99938b;
+
 }
+
+/* asdasdsadsadasd */
+.plikLista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    text-align: left;
+    padding: 0px 10px;
+    margin-bottom: 2px;
+  }
+  
+  .plikLista li {
+    display: flex;
+    justify-content: space-between; /* tekst po lewej, krzyżyk po prawej */
+    align-items: center;           /* pionowe wyśrodkowanie */
+    padding: 6px 10px;
+    background: #bbb4ac;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .plikLista li:hover {
+    background-color: #99938b;
+    color: white;
+  }
+  
+  .plikLista .close {
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    margin-left: 10px;
+    transition: color 0.2s;
+  }
+  
+  .plikLista .close:hover {
+    color: red;
+  }
+
+
 /* ------------------------------------------------------- */
 
 .ptaszekPudlo{
@@ -841,8 +908,8 @@ footer a:hover{
     display: flex;
     align-items: center;
     gap: 1px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 #checkbox{
@@ -854,13 +921,18 @@ footer a:hover{
 }
 
 #ptaszekOpis{
-    font-size: 13px;
+    font-size: 12px;
     width: 90%;
     /* border: 1px solid blue; */
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+
+#ptaszekOpis a{
+    color: #ad9d8a;
+    font-weight: bolder;
 }
 
 .formularz form button{
@@ -876,4 +948,45 @@ footer a:hover{
 .formularz form button:hover{
     cursor: pointer;
     background-color: #71675d;
+}
+
+
+
+/* ------------------------- MOJ PANEL ----------------------------- */
+
+.logowanie{
+    height: 60vh;
+    width: 80vw;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.logowaniePanel{
+    width: 75%;
+    height: 100%;
+    /* border: 3px solid blue; */
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    font-size: 300%;
+}
+
+.logowanieObrazkiInfo{
+    width: 25%;
+    height: 100%;
+    padding-left: 20px;
+    /* border: 3px solid green; */
+    border-left: 2px solid #656059;
+}
+
+.lObrazekPudlo{
+    display: flex;
+    align-items: center;   
+    justify-content: left; 
+    height: 10vh;        
+    /* border: 1px solid pink; */
+    gap: 20px;
+    font-size: 160%;
+    color: #bdae9e;
+    margin-bottom: 15px;
 }
