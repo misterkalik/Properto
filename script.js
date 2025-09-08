@@ -106,49 +106,6 @@ telInput.addEventListener("input", function() {
 
 // -----------------------------------------------------------------------------WYSYLANIE FORM MAILI
 
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".formsy");
-    const result = document.createElement("div");
-    result.id = "result";
-    result.style.marginTop = "15px";
-    form.appendChild(result);
-
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        result.innerHTML = "⏳ Wysyłanie...";
-        result.style.color = "black";
-
-        try {
-            const formData = new FormData(form);
-
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
-
-            const json = await response.json();
-
-            if (response.ok) {
-                result.innerHTML = "✅ Formularz wysłany pomyślnie!";
-                result.style.color = "green";
-                form.reset();
-                document.querySelector(".plikLista").innerHTML = "Brak plików";
-            } else {
-                result.innerHTML = "❌ Błąd: " + (json.message || "nie udało się wysłać");
-                result.style.color = "red";
-            }
-        } catch (error) {
-            console.error(error);
-            result.innerHTML = "⚠️ Wystąpił problem z połączeniem!";
-            result.style.color = "red";
-        }
-
-        setTimeout(() => {
-            result.innerHTML = "";
-        }, 4000);
-    });
-});
 
 
 
