@@ -107,7 +107,7 @@ telInput.addEventListener("input", function() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".formularz");
+    const form = document.querySelector(".formsy");
     const result = document.createElement("div");
     result.id = "result";
     result.style.marginTop = "15px";
@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 4000);
     });
 });
+
 
 
 
