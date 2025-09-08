@@ -104,7 +104,7 @@ telInput.addEventListener("input", function() {
 });
 
 
-
+// -----------------------------------------------------------------------------WYSYLANIE FORM MAILI
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".formsy");
@@ -114,13 +114,12 @@ document.addEventListener("DOMContentLoaded", function () {
     form.appendChild(result);
 
     form.addEventListener("submit", async function (e) {
-        e.preventDefault(); // zatrzymuje standardowe wysyłanie formularza
+        e.preventDefault();
 
         result.innerHTML = "⏳ Wysyłanie...";
-        result.style.color = "white";
+        result.style.color = "black";
 
         try {
-            // przygotowanie danych z formularza (z plikami!)
             const formData = new FormData(form);
 
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -133,8 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.ok) {
                 result.innerHTML = "✅ Formularz wysłany pomyślnie!";
                 result.style.color = "green";
-                form.reset(); // czyści formularz
-                document.querySelector(".plikLista").innerHTML = "Brak plików"; // reset listy plików
+                form.reset();
+                document.querySelector(".plikLista").innerHTML = "Brak plików";
             } else {
                 result.innerHTML = "❌ Błąd: " + (json.message || "nie udało się wysłać");
                 result.style.color = "red";
@@ -145,12 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
             result.style.color = "red";
         }
 
-        // ukrywa komunikat po 4 sekundach
         setTimeout(() => {
             result.innerHTML = "";
         }, 4000);
     });
 });
+
 
 
 
