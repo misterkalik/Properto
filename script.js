@@ -103,4 +103,54 @@ telInput.addEventListener("input", function() {
   this.value = liczby;
 });
 
-  
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".formularz");
+    const result = document.createElement("div");
+    result.id = "result";
+    result.style.marginTop = "15px";
+    form.appendChild(result);
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // zatrzymuje standardowe wysyłanie formularza
+
+        result.innerHTML = "⏳ Wysyłanie...";
+        result.style.color = "white";
+
+        try {
+            // przygotowanie danych z formularza (z plikami!)
+            const formData = new FormData(form);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const json = await response.json();
+
+            if (response.ok) {
+                result.innerHTML = "✅ Formularz wysłany pomyślnie!";
+                result.style.color = "green";
+                form.reset(); // czyści formularz
+                document.querySelector(".plikLista").innerHTML = "Brak plików"; // reset listy plików
+            } else {
+                result.innerHTML = "❌ Błąd: " + (json.message || "nie udało się wysłać");
+                result.style.color = "red";
+            }
+        } catch (error) {
+            console.error(error);
+            result.innerHTML = "⚠️ Wystąpił problem z połączeniem!";
+            result.style.color = "red";
+        }
+
+        // ukrywa komunikat po 4 sekundach
+        setTimeout(() => {
+            result.innerHTML = "";
+        }, 4000);
+    });
+});
+
+
+
