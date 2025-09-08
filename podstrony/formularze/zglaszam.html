@@ -25,7 +25,10 @@
                 <div class="fTytul">ZGŁASZAM</div>
                 <p class="fOpis">W celu zgłoszenia usterek, awarii lub innych nieprawidłowości w Państwa nieruchomości prosimy o wypełnienie poniższego formularza. Zgłoszenia będą niezwłocznie rejestrowane i przekazywane do odpowiednich służb w celu podjęcia działań naprawczych. Uprzejmie prosimy o możliwie precyzyjne opisanie problemu, co pozwoli na szybsze i skuteczniejsze usunięcie usterki.</p>
                 
-                <form class="formularz"  action="https://formsubmit.co/misterkalik@gmail.com" method="POST" enctype="multipart/form-data">
+                <form class="formularz"  action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+
+                    <input type="hidden" name="access_key" value="a29a733b-4fa8-4de7-b720-ce9aac86c39b">
+                    
                     <label for="name">IMIĘ I NAZWISKO</label><br>
                     <input type="text" id="name" name="name" placeholder="Jan Kowalski" maxlength="90" required><br><br>
 
@@ -71,6 +74,7 @@
 
 
 </html>
+
 
 
 
