@@ -670,7 +670,7 @@ footer a:hover{
 }
 
 #fPowrot{
-    position:absolute;
+    position: fixed;
     top: 5vh;
     right: 3vw;
     text-decoration: none;
@@ -696,7 +696,7 @@ footer a:hover{
 
 .fOpis{
     width: 50vw;
-    font-size: 100%;
+    font-size: 90%;
     line-height: 1.5;
     margin-bottom: 2vh;
 }
@@ -737,6 +737,7 @@ footer a:hover{
     color: #a39d97;      
     font-style: italic; 
     opacity: 1;        
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
   }
 
   .formularz form select{
@@ -757,6 +758,7 @@ footer a:hover{
     color: #a39d97;      
     font-style: italic; 
     opacity: 1;   
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
 }
 
 .formularz form textarea{
@@ -779,6 +781,7 @@ footer a:hover{
     color: #a39d97;       
     font-style: italic; 
     opacity: 1;  
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
 }
 /* ------------------------------------------------------- */
 .zdjeciaPudelko{
@@ -1094,5 +1097,6 @@ footer a:hover{
         display: none;
     }
 }
+
 
 
