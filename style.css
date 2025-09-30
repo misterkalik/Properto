@@ -441,7 +441,7 @@ footer a:hover{
     padding: 20px;
     text-align: center;
     font-size: 105%;
-    display: flex;
+    /* display: flex; */
     position: relative;
     line-height: 1.5; 
     
@@ -1206,5 +1206,6 @@ footer a:hover{
         display: none;
     }
 }
+
 
 
