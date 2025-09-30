@@ -695,6 +695,7 @@ footer a:hover{
 
 .RodoNormalTekst{
     text-align: justify;
+    text-decoration: none;
     
     /* white-space: pre; */
 }
@@ -1205,4 +1206,5 @@ footer a:hover{
         display: none;
     }
 }
+
 
