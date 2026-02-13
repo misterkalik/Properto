@@ -25,7 +25,9 @@
                 <div class="fTytul">UMAWIAM SPOTKANIE</div>
                 <p class="fOpis">W celu umówienia spotkania prosimy o wypełnienie poniższego formularza. Po otrzymaniu zgłoszenia skontaktujemy się z Państwem w celu potwierdzenia terminu oraz szczegółów spotkania.</p>
                 
-                <form class="formularz">
+                <form class="formularz" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="6f296cbf-e756-4363-99ab-dfced86d2593">
+                    
                     <label for="name">IMIĘ I NAZWISKO</label><br>
                     <input type="text" id="name" name="name" placeholder="Jan Kowalski" maxlength="90" required><br><br>
 
@@ -66,6 +68,7 @@
 
 
 </html>
+
 
 
 
