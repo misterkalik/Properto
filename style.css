@@ -1,20 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0px;
 }
+
 body{
     background-color: rgb(0, 0, 0);
     color:white;
     padding-bottom: 20vh;
-    font-family: "Spectral", serif;
-    font-weight: 200;
+
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
+
+    /* font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal; */
+
+    /* font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal; */
+}
+
+body.noFooter{
+    padding-bottom: 0px;
+}
+
+.EBGaramond{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.Raleway{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
 }
 
 #tytulowa{
     background: 
-    linear-gradient(rgba(27, 21, 9, 0.9), rgba(27, 21, 9, 0.9)), 
-    url("wizualne/grafiki/budynek.jpg");
+    linear-gradient(rgba(27, 21, 9, 0.9), rgba(27, 21, 9, 0.8)), 
+    url("wizualne/grafiki/tlo/tlo2.jpeg");
     background-size: cover;
     background-position: center;
     /* display: block; Ustawianie WIDOKU */
@@ -152,6 +190,23 @@ body{
     margin-bottom: 5vh;
 }
 
+#ofertaPowrot{
+    color: rgba(208, 208, 208, 0.799);
+    position: absolute;
+    top: 1vh;
+    right: 5vw;
+    font-size: 200%;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#ofertaPowrot:hover{
+    cursor: pointer;
+}
+
 .ofertaKoniec .ofertaDymki{
     background-color: #bbb4ac;
     height: 100%;
@@ -173,7 +228,12 @@ body{
 }
 
 .ofertaDymkiTekst{
-    font-size: 15px;
+    font-size: 90%;
+    line-height: 1.3;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 .ofertaDymkiTytul:hover, .ofertaDymkiTekst:hover{
@@ -203,6 +263,10 @@ body{
     margin: 0px 15px;              
     color: white;                 
     font-weight: 500;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
 }
 
 #pasekInfo .infoNapis img {
@@ -236,6 +300,10 @@ footer a{
     transition: height 0.3s;
     text-decoration: none;
     color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
 }
 
 footer a:hover{
@@ -255,7 +323,7 @@ footer a:hover{
     background-size: 80vh;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(27, 21, 9, 0.9);
+    background-color: rgba(27, 21, 9, 0.8);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;   /* wyśrodkuje w poziomie */
@@ -263,14 +331,15 @@ footer a:hover{
     
 }
 
-
 .tMaska {
-    position: absolute;
-    top: 2vh;
+    position: fixed;       
+    top: 40%;              
+    left: 50%;             
+    transform: translate(-50%, -50%); /* przesunięcie o połowę szer. i wys. żeby idealnie wyśrodkować */
     z-index: -2;
     display: inline-block;
-    width: 40vw;
-    height: 70vh;
+    width: 40vw;           
+    height: 70vh;          
 }
 
 .tMaska img {
@@ -287,7 +356,7 @@ footer a:hover{
     z-index: -2;
     
     /* kolor nakładany na SVG, może być przezroczysty */
-    background-color: rgba(27, 21, 9, 0.8); 
+    background-color: rgba(27, 9, 9, 0.8); 
     
     /* maska z SVG */
     -webkit-mask-image: url("wizualne/grafiki/LOGO PROPERTO/batch_DOMEK.svg");
@@ -366,13 +435,22 @@ footer a:hover{
 }
 
 .opisDymek{
+    width: 60vw;
     background-color: #e4e0db;
     border-radius: 25px;
     padding: 20px;
     text-align: center;
-    font-size: 17px;
+    font-size: 105%;
     display: flex;
     position: relative;
+    line-height: 1.5; 
+    
+
+    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 }
 
 /* ------------------------- KONTAKT ----------------------------- */
@@ -402,6 +480,12 @@ footer a:hover{
 .kontakt p{
     margin-top: 20px;
     font-size: 23px;
+    line-height: 1.5; 
+    margin: 5px;
+}
+
+.kontaktPKolor{
+    color: #BBB4AC;
 }
 
 .kontakt hr{
@@ -440,7 +524,10 @@ footer a:hover{
     justify-content: center;
     align-items: center;
     padding: 5vh 0vw;
-    
+}
+
+#zalatwSprawe a{
+    text-decoration: none;
 }
 
 .zsKategoria{
@@ -454,6 +541,7 @@ footer a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 2px;
     /* border: 3px solid red; */
 }
 
@@ -461,13 +549,10 @@ footer a:hover{
     color: black;
     width: 100%;
     /* border: 1px solid red; */
-    margin: 0px 0px 20px 0px;
-    font-size: 30px;
+    margin: 0px 0px 5px 0px;
+    font-size: 34px;
 }
 
-.zsTytul:hover{
-    cursor: default;
-}
 
 .zsWybor{
     color: black;
@@ -478,6 +563,13 @@ footer a:hover{
     overflow: hidden;         /* nic nie wyleci */
     opacity: 0;               /* niewidoczny */
     transition: max-height 0.6s ease, opacity 0.6s ease;
+
+    line-height: 1.5; 
+
+    
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 } 
 
 .zsKategoria:hover .zsWybor {
@@ -485,7 +577,7 @@ footer a:hover{
     opacity: 1;
   }
 
-.zsWybor a{
+/* .zsWybor a{
     color: black;
     text-decoration: none;
     margin: 5px 0px;
@@ -496,7 +588,7 @@ footer a:hover{
 .zsWybor a:hover{
     cursor: pointer;
     text-decoration: underline;
-}
+} */
 
 
 /* ------------------------- AKTUALNOSCI ----------------------------- */
@@ -572,3 +664,545 @@ footer a:hover{
     white-space: pre-line;
     font-size: 100%;
 }
+
+
+
+/* ------------------------- RODO ----------------------------- */
+
+/* #klauzula{
+    text-align: center;
+    
+} */
+.opisDymekRodo{
+    width: 60vw;
+    background-color: #e4e0db;
+    border-radius: 25px;
+    padding: 20px;
+    font-size: 105%;
+    line-height: 1.5; 
+    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.RodoNaglowki{
+    font-size: 115%;
+    font-weight: 700;
+    
+}
+
+.RodoNormalTekst{
+    text-align: justify;
+    
+    /* white-space: pre; */
+}
+
+.opisDymekRodo ul{
+    list-style-type: disc; 
+    
+}
+
+
+
+/* ------------------------- FORMULARZE ----------------------------- */
+
+.tloFormularze{
+    width: 100%;
+    height: auto; 
+    min-height: 100vh;
+    /* border: 2px solid red; */
+    /* background: 
+    linear-gradient(rgba(27, 21, 9, 0.9), rgba(27, 21, 9, 0.9)), 
+    url("grafiki/LOGO PROPERTO/batch_DOMEK.svg"); */
+    background-size: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(27, 21, 9, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* wyśrodkuje w poziomie */
+    align-items: center; 
+}
+
+.formularz{
+    width: 100vw;
+    height: auto; 
+    min-height: 80vh;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 0vw;
+}
+
+#fPowrot{
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    text-decoration: none;
+    color: #8b837a;
+    font-size: 30px;
+}
+
+.fTytul{
+    width: 220px;
+    height: 100px;
+    background-color: #bbb4ac;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 4vh;
+    font-size: 200%;
+}
+
+.fTytul:hover{
+    cursor: default;
+}
+
+.fOpis{
+    width: 50vw;
+    font-size: 90%;
+    line-height: 1.5;
+    margin-bottom: 2vh;
+}
+
+.fOpis:hover{
+    cursor: default;
+}
+
+.formularz form{
+    /* border: 1px solid blue; */
+    width: 30%;
+    height: auto;
+    display: block;
+    text-align: left;
+    padding: 0px;
+}
+
+.formularz form label{
+    font-size: 120%;
+    margin-left: 0px;
+}
+
+.formularz form input{
+    width: 100%;
+    height: 35px;
+    background-color: #EBE5DE;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.formularz input::placeholder {
+    color: #a39d97;      
+    font-style: italic; 
+    opacity: 1;
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
+  }
+
+  .formularz form select{
+    width: 100%;
+    height: 35px;
+    background-color: #EBE5DE;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 10px; 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.formularz form select:invalid{
+    color: #a39d97;      
+    font-style: italic; 
+    opacity: 1;   
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
+}
+
+.formularz form textarea{
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    background-color: #EBE5DE;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    resize: vertical;
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.formularz form textarea::placeholder{
+    color: #a39d97;       
+    font-style: italic; 
+    opacity: 1;  
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
+}
+/* ------------------------------------------------------- */
+.zdjeciaPudelko{
+    height: auto;
+    width: 100%;
+    background-color: #EBE5DE;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+
+/* .file-upload */
+.plikWgraj input[type="file"] {
+    display: none;
+}
+  
+  /* Styl własnego przycisku */
+/* .custom-file-button */
+.plikGuzik{
+    display: inline-block;
+    width: 20%;
+    height: 60px;
+    background-color: #BBB4AC; 
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;  
+    cursor: pointer;
+}
+
+/* .custom-file-button:hover */
+.plikGuzik:hover {
+    background-color: #99938b;
+}
+
+/* .file-upload */
+.plikWgraj {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* border: 1px solid red; */
+}
+
+/* asdasdsadsadasd */
+.plikLista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    text-align: left;
+    padding: 0px 10px;
+    margin-bottom: 2px;
+  }
+  
+  .plikLista li {
+    display: flex;
+    justify-content: space-between; /* tekst po lewej, krzyżyk po prawej */
+    align-items: center;           /* pionowe wyśrodkowanie */
+    padding: 6px 10px;
+    background: #bbb4ac;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .plikLista li:hover {
+    background-color: #99938b;
+    color: white;
+  }
+  
+  .plikLista .close {
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    margin-left: 10px;
+    transition: color 0.2s;
+  }
+  
+  .plikLista .close:hover {
+    color: red;
+  }
+
+
+/* ------------------------------------------------------- */
+
+.ptaszekPudlo{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#checkbox{
+    height: 20px;
+    width: 20px;
+    background-color: #EBE5DE;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+#ptaszekOpis{
+    font-size: 12px;
+    width: 90%;
+    /* border: 1px solid blue; */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+#ptaszekOpis a{
+    color: #ad9d8a;
+    font-weight: bolder;
+}
+
+.formularz form button{
+    height: 50px;
+    width: 50%;
+    margin: 0% 25%;
+    background-color: #bdae9e;
+    border-radius: 15px;
+    margin-top: 35px;
+    font-size: 180%;
+}
+
+.formularz form button:hover{
+    cursor: pointer;
+    background-color: #71675d;
+}
+
+
+
+/* ------------------------- MOJ PANEL ----------------------------- */
+
+.logowanie{
+    height: 70vh;
+    width: 80vw;
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.logowaniePanel{
+    width: 75%;
+    height: 100%;
+    /* border: 3px solid blue; */
+    display: flex;
+    
+    align-items: center;   
+    justify-content: center;
+    /* background-image: url('wizualne/grafiki/IKONY\ STRONA/mój panel/domek.png');
+    background-repeat: no-repeat;
+    background-size: 100% 120%; */
+}
+
+.logowaniePanelObrazek{
+    height: 70vh;
+    width: 90%;
+    /* border: 3px solid red; */
+    background-image: url('wizualne/grafiki/IKONY\ STRONA/mój panel/domek.png');
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+
+.logowanieInputy{
+    /* border: 2px solid rgb(50, 2, 141); */
+    width: 350px;
+    position: relative;
+    top: 55%;
+    left: 17%;
+}
+
+.logowanieInputy p{
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.logowanieInputy input{
+    width: 100%;
+    height: 35px;
+    background-color: #EBE5DE;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.logowanieInputy input::placeholder {
+    color: rgb(27, 21, 9); 
+    font-style: italic; 
+    opacity: 1;
+    font-size: 16px;    /*  ZMNIEJSZENIE PODPOWIEDZI */
+    text-align: center;
+    font-weight: 500;
+}
+
+.logowanieLabel{
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+
+
+.logowanieObrazkiInfo{
+    width: 25%;
+    height: 100%;
+    padding-left: 20px;
+    /* border: 3px solid green; */
+    border-left: 2px solid #656059;
+}
+
+.lObrazekPudlo{
+    display: flex;
+    align-items: center;   
+    justify-content: left; 
+    height: 10vh;        
+    /* border: 1px solid pink; */
+    gap: 20px;
+    font-size: 160%;
+    color: #bdae9e;
+    margin-bottom: 15px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
+/* --------------->>>>>>>>> TELEFON <<<<<<<<<<------------------- */
+
+
+
+@media (max-width: 999px) {
+    /* ----------STRONA GLOWNA----------- */
+    
+
+    /* ----------O FIRMIE----------- */
+    .opisTytulPrawa{
+        left:33%;
+    }
+    .opisTytul{
+        left:10%;
+    }
+
+    /* ----------MOJ PANEL----------- */
+    .lObrazekPudlo{
+        height: 3vh;
+        margin-top: 50px;
+    }
+    /* ----------ZALATW SPRAWE----------- */
+    .zsTytul{
+        font-size: 230%;
+    }
+    
+    .zsWybor{
+        max-height: 80%;
+        opacity: 1;
+        font-size: 130%;
+    }
+
+    /* ----------KONTAKT----------- */
+    .kontakt hr{
+        width: 100%;
+    }
+
+    /* ----------FORMULARZE----------- */
+    #fPowrot{
+        font-size: 250%;
+    }
+
+    .fTytul{
+        width: 360px;
+        height: 180px;
+        line-height: 180px;
+        font-size: 400%;
+    }
+    
+    .fOpis{
+        width: 60%;
+        font-size: 160%;
+    }
+    
+    .formularz form{
+        width: 60%;
+    }
+
+    .formularz form label{
+        font-size: 160%;
+    }
+
+    .formularz form input{
+        margin-bottom: 50px;
+        height: 65px;
+        border-radius: 35px;
+        font-size: 200%;
+        padding: 10px;
+    }
+
+    .formularz form select{
+        margin-bottom: 60px;
+        height: 65px;
+        border-radius: 35px;
+        font-size: 200%;
+        padding: 10px;
+    }
+
+    .formularz form textarea{
+        margin-bottom: 60px;
+        height: 65px;
+        border-radius: 35px;
+        font-size: 200%;
+        padding: 10px;
+    }
+
+    .plikLista{
+        font-size: 200%;
+    }
+
+    #checkbox{
+        height: 40px;
+        width: 40px;
+    }
+
+    #ptaszekOpis{
+        font-size: 140%;
+    }
+
+    .formularz form button{
+        font-size: 240%;
+    }
+
+    .enter{
+        display: none;
+    }
+}
+
